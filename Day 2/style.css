@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #6b73ff 10%, #000dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    padding: 2% 0;
+}
+
+.signup-container {
+    background-color: bisque;
+    border-radius: 5%;
+    border: 10px solid rgb(238, 255, 0);
+    width: 90%; 
+    max-width: 400px; 
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.input-group, .btn {
+    margin: 20px auto;
+    width: 100%; 
+    text-align: center;
+}
+
+#username, #email, #pass, #conpass, #signup {
+    text-align: center;
+    border-radius: 5px;
+    width: 100%; 
+    max-width: 250px; 
+    height: 35px;
+    margin: 10px 0;
+}
+
+#signup {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    color: aqua;
+    background-color: black;
+    border: 2px solid;
+    height: 50px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#signup:hover {
+    color: black;
+    background-color: aqua;
+}
+
+h5 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1024px) {
+    .signup-container {
+        width: 50%;
+        max-width: 450px; 
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .signup-container {
+        width: 70%;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    #signup {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .signup-container {
+        width: 90%; 
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #signup {
+        font-size: 1.2rem;
+    }
+}

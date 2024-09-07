@@ -1,0 +1,14 @@
+body{
+    background-image: url(./image/nature.png);
+    background-size: cover;
+}
+table{
+    width: fit-content;
+    border-collapse: collapse;
+    background-color: aqua;
+    box-shadow: 10cm;
+}
+td,th{
+    padding: 12px 15px;
+    border: 1px solid;
+}

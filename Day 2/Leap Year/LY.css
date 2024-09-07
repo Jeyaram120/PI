@@ -1,0 +1,126 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #6bff9c 10%, #ff0022);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+    padding-top: 2.5%;
+}
+
+/* Container Styling */
+.container {
+    background-color: bisque;
+    border-radius: 5%;
+    border: 10px solid #000dff;
+    font-size: 1.5rem; /* Responsive font size */
+    font-family: 'Times New Roman', Times, serif;
+    margin: auto;
+    width: 90%; /* Full width for mobile */
+    max-width: 600px; /* Limit width for larger screens */
+    padding: 20px;
+    text-align: center; /* Center text within the container */
+}
+
+/* Button and Input Styling */
+#LY, #LYbtn {
+    text-align: center;
+    border-radius: 5px;
+    width: 100%; /* Full width of the container */
+    max-width: 350px; /* Limit width for inputs */
+    height: 50px;
+    font-size: 1.5rem; /* Responsive font size */
+    margin: 10px auto; /* Center horizontally */
+}
+
+/* Button Specific Styling */
+#LYbtn {
+    color: aqua;
+    background-color: black;
+    border: 2px solid;
+    font-size: 1.5rem; /* Font size for button */
+    border-radius: 15%;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#LYbtn:hover {
+    color: black;
+    background-color: aqua;
+}
+
+/* Header Styling */
+h1, h3 {
+    text-align: center;
+    font-size: 2.5rem; /* Responsive font size */
+    margin: 20px 0; /* Space above and below headers */
+}
+
+/* Media Queries for Responsiveness */
+
+/* Large Devices (Desktops, Laptops) */
+@media (min-width: 1024px) {
+    .container {
+        width: 50%;
+        max-width: 600px;
+    }
+    
+    #LY, #LYbtn {
+        font-size: 1.5rem; /* Adjust font size */
+    }
+    
+    h1 {
+        font-size: 3rem; /* Larger font size for headers */
+    }
+
+    h3 {
+        font-size: 2rem; /* Larger font size for headers */
+    }
+}
+
+/* Medium Devices (Tablets) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        width: 70%;
+        max-width: 500px;
+    }
+    
+    #LY, #LYbtn {
+        font-size: 1.25rem; /* Adjust font size */
+    }
+    
+    h1 {
+        font-size: 2.5rem; /* Medium font size for headers */
+    }
+
+    h3 {
+        font-size: 1.75rem; /* Medium font size for headers */
+    }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 767px) {
+    .container {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    #LY, #LYbtn {
+        font-size: 1rem; /* Smaller font size */
+    }
+    
+    h1 {
+        font-size: 2rem; /* Smaller font size for headers */
+    }
+
+    h3 {
+        font-size: 1.5rem; /* Smaller font size for headers */
+    }
+}

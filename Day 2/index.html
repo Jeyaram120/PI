@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../icon/logo.ico">
+</head>
+<body>
+    <div class="signup-container">
+        <h2>Sign Up</h2>
+        <form action="">
+            <div class="input-groug">
+                <label for="username">Username</label><br>
+                <input type="text" id="username" name="username" required>
+            </div><br>
+            <div class="input-groug">
+                <label for="email">Email ID</label><br>
+                <input type="email" id="email" name="email" required>
+            </div><br>
+            <div class="input-groug">
+                <label for="password">Password</label><br>
+                <input type="password" id="pass" name="password" required>
+            </div><br>
+            <div class="input-groug">
+                <label for="ConfirmPassword">Confirm Password</label><br>
+                <input type="password" id="conpass" name="ConfirmPassword" required>
+            </div><br>
+            <div class="btn">
+                <button id="signup" type="submit" onclick="sign_up()"><strong>Sign Up</strong></button>
+            </div><br>
+        </form>
+        <h5>Already Have an Account? <a href="login.html">Log in</a></h5>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

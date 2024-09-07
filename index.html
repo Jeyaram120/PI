@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Index</title>
+    <link rel="icon" type="image/x-icon" href="./icon/logo.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1><strong><u>JEYARAM R</u></strong></h1>
+    <h1><b>PROJECT INDEX</b></h1>
+    <details>
+        <summary>Day 1</summary>
+        <article>
+            <ol>
+                <li>
+                    <a href="./Day 1/Basic HTML & CSS/index.html" target="_blank">HTML & CSS <strong>Basic</strong> - <strong>Web Page</strong></a><br><br>
+                    <a href="" target="_blank">HTML & CSS Basic - <strong>Coding Page</strong></a>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <a href="./Day 1/calc/calc.html" target="_blank">HTML, CSS, & JS <strong>Calcution Operations and Flex</strong> - <strong>Web Page</strong></a><br><br>
+                    <a href="" target="_blank">HTML, CSS, & JS Calcution Operations and Flex - <strong>Coding Page</strong></a>
+                </li>
+            </ol> 
+        </article>
+    </details>
+    <br>
+    <details>
+        <summary>Day 2</summary>
+        <article>
+            <ol>
+                <li>
+                    <a href="./Day 2/index.html" target="_blank">HTML,CSS & JS <strong>Sign Up and Login</strong> - <strong>Web Page</strong></a><br><br>
+                    <a href="" target="_blank">HTML,CSS & JS Sign Up and Login - <strong>Coding Page</strong></a>
+                </li>
+            </ol>
+            <ol>
+                <li>
+                    <a href="./Day 2/Leap Year/leapyear.html" target="_blank">HTML, CSS, & JS <strong>To Check LEAP YEAR</strong> - <strong>Web Page</strong></a><br><br>
+                    <a href="" target="_blank">HTML, CSS, & JS To Check LEAP YEAR - <strong>Coding Page</strong></a>
+                </li>
+            </ol> 
+        </article>
+    </details>
+    <br>
+
+    <script>
+    
+        const orderedLists = document.querySelectorAll('ol');
+        let currentStart = 1; // Initialize the start value
+
+        // Loop through each ordered list
+        orderedLists.forEach((list, index) => {
+            if (index !== 0) { // Skip the first list (already starts from 1)
+                list.setAttribute('start', currentStart);
+            }
+            currentStart += list.getElementsByTagName('li').length; // Update start value for next list
+        });
+    </script>
+</body>
+</html>
