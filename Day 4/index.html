@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="../icon/logo.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator With Eval</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #2a2828;
+        }
+        .calculator{
+            border: 10px solid #0000;
+            padding: 20px;
+            background: linear-gradient(45deg,#ff6b6b,#ffd900);
+            border-radius: 5%;
+            animation: disco 2.5s infinite;
+        }
+        @keyframes disco {
+  0% {
+      border-color: red;
+      box-shadow: 10px 10px 250px red;
+  }
+  25% {
+      border-color: rgb(255, 255, 255);
+      box-shadow: 10px 10px 250px rgb(255, 255, 255);
+  }
+  50% {
+      border-color: rgb(255, 0, 191);
+      box-shadow: 10px 10px 250px rgb(255, 0, 217);
+  }
+  75% {
+      border-color: rgb(0, 255, 0);
+      box-shadow: 10px 10px 250px rgb(0, 255, 0);
+  }
+  100% {
+      border-color: blue;
+      box-shadow: 10px 10px 250px blue;
+  }
+}
+        .button{
+            width: 60px;
+            height: 60px;
+            font-size: 30px;
+            margin: 5px;
+            border: solid white;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+        .button:hover{
+            transform: scale(1.2);
+        }
+        #display{
+            width: 275px;
+            height: 50px;
+            text-align: right;
+            padding: 5px;
+            margin-bottom: 10px;
+            font-size: 24px;
+            border: 1px solid #000000;
+            border-radius: 5px;
+            background-color: rgb(71, 216, 216);
+            color: #000000;
+        }
+        #display:hover{
+            transform: scale(1.1);
+        }
+        #clear:hover{
+            background-color: red;
+            color: white;
+        }
+        #cal:hover{
+            background-color: green;
+            color: white;
+        }
+        #val:hover{
+            background-color: #7ac1ff;
+            color: rgb(0, 8, 254);
+        }
+        #op:hover{
+            background-color: #e7a8f7;
+            color: #9400b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled><br>
+        <button class="button" id="clear" onclick="clearDisplay()">C</button>
+        <button class="button" id="val" onclick="appendToDisplay('9')">9</button>
+        <button class="button" id="val" onclick="appendToDisplay('8')">8</button>
+        <button class="button" id="val" onclick="appendToDisplay('7')">7</button><br>
+        <button class="button" id="val" onclick="appendToDisplay('6')">6</button>
+        <button class="button" id="val" onclick="appendToDisplay('5')">5</button>
+        <button class="button" id="val" onclick="appendToDisplay('4')">4</button>
+        <button class="button" id="val" onclick="appendToDisplay('3')">3</button><br>
+        <button class="button" id="val" onclick="appendToDisplay('2')">2</button>
+        <button class="button" id="val" onclick="appendToDisplay('1')">1</button>
+        <button class="button" id="val" onclick="appendToDisplay('0')">0</button>
+        <button class="button" id="op" onclick="appendToDisplay('/')">/</button><br>
+        <button class="button" id="op" onclick="appendToDisplay('*')">*</button>
+        <button class="button" id="op" onclick="appendToDisplay('-')">-</button>
+        <button class="button" id="op" onclick="appendToDisplay('+')">+</button>
+        <button class="button" id="op" onclick="appendToDisplay('.')">.</button><br>
+        <button class="button" id="cal" onclick="calculateResult()">=</button>
+    </div>
+    <script>
+        const appendToDisplay=(value)=>{document.getElementById("display").value += value;};
+        const clearDisplay=()=>{document.getElementById("display").value ="";}; 
+        const calculateResult=()=>{
+            try{
+                document.getElementById("display").value = eval(document.getElementById("display").value);
+            }catch{
+                document.getElementById("display").value="";
+            }
+        };       
+    </script>
+</body>
+</html>
